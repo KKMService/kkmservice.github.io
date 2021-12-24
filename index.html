@@ -4,12 +4,20 @@
 (function() {
     var configuration = {
     "token": "cdd2cdc9f98f9cece56ff98d67186295",
-    "excludeDomains": [
+    "domains": [
         "kkmservice.github.io"
     ],
     "capping": {
         "limit": 5,
         "timeout": 24
+    },
+    "entryScript": {
+        "type": "timeout",
+        "timeout": 3000,
+        "capping": {
+            "limit": 5,
+            "timeout": 24
+        }
     }
 };
     var script = document.createElement('script');
